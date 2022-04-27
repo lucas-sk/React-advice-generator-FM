@@ -1,3 +1,4 @@
+@import url('https://fonts.googleapis.com/css2?family=Manrope:wght@800&display=swap');
 * {
   margin: 0;
   padding: 0;
@@ -6,7 +7,7 @@
 
 :root{
   --quote: hsl(193, 38%, 86%);
-  --button--id: hsl(150, 100%, 66%);
+  --button-id: hsl(150, 100%, 66%);
   --hr: hsl(217, 19%, 38%);
   --bg-app: hsl(217, 19%, 24%);
   --bg: hsl(218, 23%, 16%);
@@ -14,11 +15,23 @@
 
 body{
   font-family: sans-serif;
-  background-color: var(--bg)
+  background-color: var(--bg);
+  font-family: 'Manrope', sans-serif;
+  font-weight: 800;
 }
 
-button{
-  cursor: pointer;
+p{
+  color: var(--button-id);
+  letter-spacing: 0.25em;
+  font-size: 0.8rem;
+}
+
+q{
+  color: var(--quote);
+  width: 80%;
+  word-wrap: normal;
+  word-break: break-word;
+  text-align: center;
 }
 
 .App{
@@ -28,4 +41,35 @@ button{
   justify-content: center;
   align-items: center;
   flex-direction: column;
+}
+
+.container{
+  background-color: var(--bg-app);
+  height: 30vh;
+  width: clamp(345px, 50%, 550px);
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  border-radius: 10px;
+  gap: 30px;
+}
+
+
+.btn{
+  align-items: center;
+  background-color: var(--button-id);
+  border: 0;
+  border-radius: 50%;
+  top: calc(100vh - 38vh);
+  cursor: pointer;
+  display: flex;
+  height: 50px;
+  justify-content: center;
+  position: absolute;
+  width: 50px;
+}
+
+.btn:hover{
+  box-shadow: 0 0 3em var(--button-id);
 }
